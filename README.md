@@ -1,16 +1,51 @@
-# React + Vite
+# 🧠 3D Body Organs Mapping (Single Body Model | Multi-Organ Highlighting)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo → **https://3d-body-organs-mapping-indifferent.vercel.app/**  
 
-Currently, two official plugins are available:
+This project visualizes **affected organs** inside a **single human-body 3D image**, based on each patient's symptoms or conditions.  
+It uses a hotspot-based overlay system to highlight multiple organs at once on the same body.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Designed for:
 
-## React Compiler
+- Medical UI prototypes  
+- Patient dashboards  
+- Diagnostic assistants  
+- Educational anatomy tools  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Single **3D anatomical body image** for all patients  
+- Accurate hotspot mapping for each organ  
+- Multiple affected organs highlight simultaneously  
+- Patient selector with condition list  
+- Easy-to-edit organ mapping file (`mappings.js`)  
+- Clean and responsive layout  
+- Fast deployment (Vite + React)
+
+---
+
+## 🧬 How It Works
+
+### **1. Patients**
+Each patient has:
+
+- `id`
+- `name`
+- `age`
+- `description`
+- `conditions[]`
+
+### **2. Conditions → Organs Mapping**
+In `mappings.js`, each condition is mapped to one or more organs.
+
+Example:
+
+```js
+"chest pain" → ["heart"]
+"sharp abdominal pain" → ["stomach", "intestine"]
+"shortness of breath" → ["lungs"]
+
+
+
