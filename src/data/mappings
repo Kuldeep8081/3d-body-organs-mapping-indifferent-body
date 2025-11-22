@@ -1,0 +1,20 @@
+// src/data/mappings.js
+
+// Organ IDs (just constants)
+export const ORGANS = {
+  HEART: "heart",
+  LUNGS: "lungs",
+  STOMACH: "stomach",
+  INTESTINE: "intestine",
+  PANCREAS: "pancreas",
+};
+
+// Map conditions / diseases / symptoms to affected organs
+export const conditionToOrgansMap = {
+  "sharp abdominal pain": [ORGANS.INTESTINE, ORGANS.STOMACH],
+  vomiting: [ORGANS.STOMACH],
+  "chest pain": [ORGANS.HEART],
+  "shortness of breath": [ORGANS.LUNGS],
+  diabetes: [ORGANS.PANCREAS],
+  fatigue: [ORGANS.HEART, ORGANS.LUNGS],
+};
